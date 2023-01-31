@@ -77,13 +77,5 @@ namespace MoreALive
             moreAliveThread.Stop();
             System.Environment.Exit(1);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (Control.IsKeyLocked(Keys.NumLock))
-                label1.Text = "It is on";
-            else
-                label1.Text = "It is Off";
-        }
     }
 }
