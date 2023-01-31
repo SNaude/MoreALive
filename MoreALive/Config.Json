@@ -3,5 +3,7 @@
 	"startTime" : "08:30",
 	"endTime" : "17:30",
 	"interval": "120",
-	"keyPress": "NumLock"
+	"keyPress": "NumLock",
+	"endState": "On",
+	"keepEndState": "true"
 }

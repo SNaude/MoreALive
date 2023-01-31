@@ -38,9 +38,10 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(91, 69);
+            this.btnStart.Location = new System.Drawing.Point(121, 85);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Size = new System.Drawing.Size(100, 28);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Pause";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // btnConfig
             // 
-            this.btnConfig.Location = new System.Drawing.Point(91, 98);
+            this.btnConfig.Location = new System.Drawing.Point(121, 121);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnConfig.Size = new System.Drawing.Size(100, 28);
             this.btnConfig.TabIndex = 1;
             this.btnConfig.Text = "Settings";
             this.btnConfig.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // lblRunning
             // 
             this.lblRunning.AutoSize = true;
-            this.lblRunning.Location = new System.Drawing.Point(88, 41);
+            this.lblRunning.Location = new System.Drawing.Point(117, 50);
+            this.lblRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRunning.Name = "lblRunning";
-            this.lblRunning.Size = new System.Drawing.Size(91, 13);
+            this.lblRunning.Size = new System.Drawing.Size(111, 16);
             this.lblRunning.TabIndex = 2;
             this.lblRunning.Text = "Currently Running";
             // 
@@ -76,12 +79,13 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 182);
+            this.ClientSize = new System.Drawing.Size(343, 224);
             this.Controls.Add(this.lblRunning);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.btnStart);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MoreAlive";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);

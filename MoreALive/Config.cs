@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MoreALive
 {
@@ -19,10 +20,20 @@ namespace MoreALive
         ScrollLock = 2,
     }
 
+    public enum EndStateEnum
+    {
+        [EnumMember(Value = "On")]
+        On = 1,
+
+        [EnumMember(Value = "Off")]
+        Off = 2,
+    }
+
     public class Config
     {
         [JsonIgnore]
         public byte pressedKey;
+        public bool endstatebool;
 
         public bool schedule = true;
         public int startHour = 0;
@@ -31,6 +42,8 @@ namespace MoreALive
         public int endMinute = 0;
         public int interval = 0;
         public KeyPressEnum keyPress;
+        public EndStateEnum endState;
+        public bool keepEndState = true;
 
 
         public void Setup()
@@ -46,7 +59,10 @@ namespace MoreALive
                 startMinute = _config.startMinute;
                 endHour = _config.endHour;
                 endMinute = _config.endMinute;
+                keepEndState = _config.keepEndState;
+                endState = _config.endState;
                 setKeyPress();
+                setEndStatebool();
             }
             else
                 CreateDefault();
@@ -61,8 +77,12 @@ namespace MoreALive
             startMinute = 30;
             endHour = 17;
             endMinute = 30;
+            endState = EndStateEnum.On;
+            keepEndState = true;
             setKeyPress();
+            setEndStatebool();
             SaveSettings();
+
         }
 
         public void SaveSettings()
@@ -73,10 +93,19 @@ namespace MoreALive
 
         private void setKeyPress()
         {
-            switch(keyPress)
+            switch (keyPress)
             {
-                case KeyPressEnum.NumLock:pressedKey = (byte)Keys.NumLock;break;
+                case KeyPressEnum.NumLock: pressedKey = (byte)Keys.NumLock; break;
                 case KeyPressEnum.ScrollLock: pressedKey = (byte)Keys.Scroll; break;
+            }
+        }
+
+        private void setEndStatebool()
+        {
+            switch (endState)
+            {
+                case EndStateEnum.On: endstatebool = true; break;
+                case EndStateEnum.Off: endstatebool = false; break;
             }
         }
 

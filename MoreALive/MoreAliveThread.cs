@@ -46,7 +46,21 @@ namespace MoreALive
                 {
                     PressKey(config.pressedKey);
                     PressKey(config.pressedKey);
+                    KeepState();
                     Thread.Sleep(config.interval * 1000);
+                }
+            }
+        }
+
+        public void KeepState()
+        {
+            if (config.keepEndState)
+            {
+                bool isOn = Control.IsKeyLocked((Keys)config.pressedKey);
+
+                if(config.endstatebool != isOn)
+                {
+                    PressKey(config.pressedKey);
                 }
             }
         }
