@@ -68,7 +68,7 @@
             this.chkScheduled.Margin = new System.Windows.Forms.Padding(4);
             this.chkScheduled.Name = "chkScheduled";
             this.chkScheduled.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.chkScheduled.Size = new System.Drawing.Size(372, 31);
+            this.chkScheduled.Size = new System.Drawing.Size(372, 24);
             this.chkScheduled.TabIndex = 0;
             this.chkScheduled.Text = "Scheduled";
             this.chkScheduled.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             // btnSave
             // 
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSave.Location = new System.Drawing.Point(0, 252);
+            this.btnSave.Location = new System.Drawing.Point(0, 245);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(372, 28);
@@ -110,7 +110,7 @@
             // btnCancel
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCancel.Location = new System.Drawing.Point(0, 280);
+            this.btnCancel.Location = new System.Drawing.Point(0, 273);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(372, 28);
@@ -298,7 +298,7 @@
             this.gbScheduledSettings.Controls.Add(this.lblEnd);
             this.gbScheduledSettings.Controls.Add(this.txtEndMin);
             this.gbScheduledSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbScheduledSettings.Location = new System.Drawing.Point(0, 31);
+            this.gbScheduledSettings.Location = new System.Drawing.Point(0, 24);
             this.gbScheduledSettings.Name = "gbScheduledSettings";
             this.gbScheduledSettings.Size = new System.Drawing.Size(372, 108);
             this.gbScheduledSettings.TabIndex = 23;
@@ -313,7 +313,7 @@
             this.gbMainSettings.Controls.Add(this.lblInterval);
             this.gbMainSettings.Controls.Add(this.cBoxKeyPress);
             this.gbMainSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbMainSettings.Location = new System.Drawing.Point(0, 139);
+            this.gbMainSettings.Location = new System.Drawing.Point(0, 132);
             this.gbMainSettings.Name = "gbMainSettings";
             this.gbMainSettings.Size = new System.Drawing.Size(372, 113);
             this.gbMainSettings.TabIndex = 24;
