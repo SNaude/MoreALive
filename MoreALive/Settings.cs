@@ -23,6 +23,12 @@ namespace MoreALive
             txtEndMin.Text = config.endMinute.ToString();
             txtInterval.Text = config.interval.ToString();
             chkKeepEndState.Checked = config.keepEndState;
+            chkMon.Checked = config.mon;
+            chkTue.Checked = config.tue;
+            chkWed.Checked = config.wed;
+            chkThu.Checked = config.thu;
+            chkFri.Checked = config.fri;
+
             if (config.keepEndState)
                 cbEndState.Enabled = true;
             else
@@ -34,6 +40,11 @@ namespace MoreALive
                 txtStartMin.Enabled = false;
                 txtEndHour.Enabled = false;
                 txtEndMin.Enabled = false;
+                chkMon.Enabled = true;
+                chkTue.Enabled = true;
+                chkWed.Enabled = true;
+                chkThu.Enabled = true;
+                chkFri.Enabled = true;
             }
         }
 
@@ -45,6 +56,11 @@ namespace MoreALive
                 txtStartMin.Enabled = false;
                 txtEndHour.Enabled = false;
                 txtEndMin.Enabled = false;
+                chkMon.Enabled = false;
+                chkTue.Enabled = false;
+                chkWed.Enabled = false;
+                chkThu.Enabled = false;
+                chkFri.Enabled = false;
             }
             if (chkScheduled.Checked)
             {
@@ -52,6 +68,11 @@ namespace MoreALive
                 txtStartMin.Enabled = true;
                 txtEndHour.Enabled = true;
                 txtEndMin.Enabled = true;
+                chkMon.Enabled = true;
+                chkTue.Enabled = true;
+                chkWed.Enabled = true;
+                chkThu.Enabled = true;
+                chkFri.Enabled = true;
             }
         }
 
@@ -77,6 +98,12 @@ namespace MoreALive
                 config.keyPress = (KeyPressEnum)cBoxKeyPress.SelectedItem;
                 config.keepEndState = chkKeepEndState.Checked;
                 config.endState = (EndStateEnum)cbEndState.SelectedItem;
+                config.mon = chkMon.Checked;
+                config.tue = chkTue.Checked;
+                config.wed = chkWed.Checked;
+                config.thu = chkThu.Checked;
+                config.fri = chkFri.Checked;
+
                 config.SaveSettings();
                 this.Close();
             }

@@ -44,7 +44,11 @@ namespace MoreALive
         public KeyPressEnum keyPress;
         public EndStateEnum endState;
         public bool keepEndState = true;
-
+        public bool mon = true;
+        public bool tue = true;
+        public bool wed = true;
+        public bool thu = true;
+        public bool fri = true;
 
         public void Setup()
         {
@@ -61,6 +65,11 @@ namespace MoreALive
                 endMinute = _config.endMinute;
                 keepEndState = _config.keepEndState;
                 endState = _config.endState;
+                mon = _config.mon;
+                tue = _config.tue;
+                wed = _config.wed;
+                thu = _config.thu;
+                fri = _config.fri;
                 setKeyPress();
                 setEndStatebool();
             }
@@ -79,6 +88,11 @@ namespace MoreALive
             endMinute = 30;
             endState = EndStateEnum.On;
             keepEndState = true;
+            mon = true;
+            tue = true;
+            wed = true;
+            thu = true;
+            fri = true;
             setKeyPress();
             setEndStatebool();
             SaveSettings();

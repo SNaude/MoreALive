@@ -1,9 +1,17 @@
 {
-	"schedule" : "false",
-	"startTime" : "08:30",
-	"endTime" : "17:30",
-	"interval": "120",
-	"keyPress": "NumLock",
-	"endState": "On",
-	"keepEndState": "true"
+	"endstatebool": true,
+	"schedule": false,
+	"startHour": 0,
+	"startMinute": 0,
+	"endHour": 0,
+	"endMinute": 0,
+	"interval": 120,
+	"keyPress": 1,
+	"endState": 1,
+	"keepEndState": true,
+	"mon": true,
+	"tue": true,
+	"wed": true,
+	"thu": true,
+	"fri": true
 }
