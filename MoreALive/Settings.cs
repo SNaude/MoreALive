@@ -36,15 +36,16 @@ namespace MoreALive
 
             if (!chkScheduled.Checked)
             {
+                gbScheduledSettings.Visible = false;
                 txtStartHour.Enabled = false;
                 txtStartMin.Enabled = false;
                 txtEndHour.Enabled = false;
                 txtEndMin.Enabled = false;
-                chkMon.Enabled = true;
-                chkTue.Enabled = true;
-                chkWed.Enabled = true;
-                chkThu.Enabled = true;
-                chkFri.Enabled = true;
+                chkMon.Enabled = false;
+                chkTue.Enabled = false;
+                chkWed.Enabled = false;
+                chkThu.Enabled = false;
+                chkFri.Enabled = false;
             }
         }
 
@@ -52,6 +53,7 @@ namespace MoreALive
         {
             if (!chkScheduled.Checked)
             {
+                gbScheduledSettings.Visible = false;
                 txtStartHour.Enabled = false;
                 txtStartMin.Enabled = false;
                 txtEndHour.Enabled = false;
@@ -64,6 +66,7 @@ namespace MoreALive
             }
             if (chkScheduled.Checked)
             {
+                gbScheduledSettings.Visible = true;
                 txtStartHour.Enabled = true;
                 txtStartMin.Enabled = true;
                 txtEndHour.Enabled = true;
