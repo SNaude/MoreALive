@@ -33,8 +33,10 @@ namespace MoreALive
     {
         [JsonIgnore]
         public byte pressedKey;
-        public bool endstatebool;
+        [JsonIgnore]
+        public bool PauseScheduler = false;
 
+        public bool endstatebool;
         public bool schedule = true;
         public int startHour = 0;
         public int startMinute = 0;

@@ -47,8 +47,8 @@ namespace MoreALive
                     PressKey(config.pressedKey);
                     PressKey(config.pressedKey);
                     KeepState();
-                    Thread.Sleep(config.interval * 1000);
                 }
+                Thread.Sleep(config.interval * 1000);
             }
         }
 
@@ -67,6 +67,9 @@ namespace MoreALive
 
         public bool CheckRun()
         {
+            if (config.PauseScheduler)
+                return true;
+
             var now = DateTime.Now;
 
             if (now.DayOfWeek == DayOfWeek.Monday && !config.mon) { return false; }

@@ -20,6 +20,7 @@ namespace MoreALive
         {
             InitializeComponent();
             config.Setup();
+            cbPauseSchedule.Checked = config.PauseScheduler;
             moreAliveThread = new MoreAliveThread();
             moreAliveThread.ThreadMain(ref config);
         }
@@ -76,6 +77,11 @@ namespace MoreALive
         {
             moreAliveThread.Stop();
             System.Environment.Exit(1);
+        }
+
+        private void cbPauseSchedule_CheckedChanged(object sender, EventArgs e)
+        {
+            config.PauseScheduler = cbPauseSchedule.Checked;
         }
     }
 }

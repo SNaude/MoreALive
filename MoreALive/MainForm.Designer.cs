@@ -34,6 +34,7 @@
             this.btnConfig = new System.Windows.Forms.Button();
             this.lblRunning = new System.Windows.Forms.Label();
             this.ntfIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cbPauseSchedule = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnStart
@@ -77,11 +78,23 @@
             this.ntfIcon.Text = "More Alive Running";
             this.ntfIcon.DoubleClick += new System.EventHandler(this.ntfIcon_DoubleClick);
             // 
+            // cbPauseSchedule
+            // 
+            this.cbPauseSchedule.AutoSize = true;
+            this.cbPauseSchedule.Location = new System.Drawing.Point(12, 192);
+            this.cbPauseSchedule.Name = "cbPauseSchedule";
+            this.cbPauseSchedule.Size = new System.Drawing.Size(132, 20);
+            this.cbPauseSchedule.TabIndex = 3;
+            this.cbPauseSchedule.Text = "Pause Scheduler";
+            this.cbPauseSchedule.UseVisualStyleBackColor = true;
+            this.cbPauseSchedule.CheckedChanged += new System.EventHandler(this.cbPauseSchedule_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 224);
+            this.Controls.Add(this.cbPauseSchedule);
             this.Controls.Add(this.lblRunning);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.btnStart);
@@ -101,6 +114,7 @@
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Label lblRunning;
         private System.Windows.Forms.NotifyIcon ntfIcon;
+        private System.Windows.Forms.CheckBox cbPauseSchedule;
     }
 }
 
