@@ -42,7 +42,7 @@ namespace MoreALive
         {
             while (true)
             {
-                if (!config.schedule || CheckRun())
+                if (!config.schedule || Common.CheckRun(config))
                 {
                     PressKey(config.pressedKey);
                     PressKey(config.pressedKey);
@@ -63,29 +63,6 @@ namespace MoreALive
                     PressKey(config.pressedKey);
                 }
             }
-        }
-
-        public bool CheckRun()
-        {
-            if (config.PauseScheduler)
-                return true;
-
-            var now = DateTime.Now;
-
-            if (now.DayOfWeek == DayOfWeek.Monday && !config.mon) { return false; }
-            if (now.DayOfWeek == DayOfWeek.Tuesday && !config.tue) { return false; }
-            if (now.DayOfWeek == DayOfWeek.Wednesday && !config.wed) { return false; }
-            if (now.DayOfWeek == DayOfWeek.Thursday && !config.thu) { return false; }
-            if (now.DayOfWeek == DayOfWeek.Friday && !config.fri) { return false; }
-
-            if (now.Hour > config.startHour && now.Hour < config.endHour)
-                return true;
-            if (now.Hour == config.startHour && now.Minute > config.startMinute)
-                return true;
-            if (now.Hour == config.endHour && now.Minute < config.endMinute)
-                return true;
-
-            return false;
         }
 
 

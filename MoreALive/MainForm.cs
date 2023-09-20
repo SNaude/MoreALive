@@ -15,7 +15,7 @@ namespace MoreALive
 
         MoreAliveThread moreAliveThread = null;
         Config config = new Config();
-        Program program = new Program();
+        //Program program = new Program();
         public MainForm()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace MoreALive
             cbPauseSchedule.Checked = config.PauseScheduler;
             moreAliveThread = new MoreAliveThread();
             moreAliveThread.ThreadMain(ref config);
+            ChangeText();
         }
 
         bool started = true;
@@ -42,19 +43,22 @@ namespace MoreALive
             else
             {
                 btnStart.Text = "Pause";
-                lblRunning.Text = "Currently Running";
+                ChangeText();
                 moreAliveThread.Start();
                 started = true;
-                ntfIcon.Text = "More Alive Running";
-                ntfIcon.BalloonTipText = "More Alive Running";
             }
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
             Settings settings = new Settings(ref config);
+            settings.Disposed += CloseSettings;
             settings.Show();
+        }
 
+        private void CloseSettings(object sender, EventArgs e)
+        {
+            ChangeText();
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
@@ -82,6 +86,23 @@ namespace MoreALive
         private void cbPauseSchedule_CheckedChanged(object sender, EventArgs e)
         {
             config.PauseScheduler = cbPauseSchedule.Checked;
+            ChangeText();
+        }
+
+        public void ChangeText()
+        {
+            if (!config.schedule || Common.CheckRun(config))
+            {
+                lblRunning.Text = "Currently Running";
+                ntfIcon.Text = "More Alive Running";
+                ntfIcon.BalloonTipText = "More Alive Running";
+            }
+            else
+            {
+                lblRunning.Text = "Paused by scheduler";
+                ntfIcon.Text = "More Alive Paused by scheduler";
+                ntfIcon.BalloonTipText = "More Alive Paused by scheduler";
+            }
         }
     }
 }

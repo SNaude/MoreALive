@@ -39,7 +39,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(121, 85);
+            this.btnStart.Location = new System.Drawing.Point(116, 71);
             this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(100, 28);
@@ -50,7 +50,7 @@
             // 
             // btnConfig
             // 
-            this.btnConfig.Location = new System.Drawing.Point(121, 121);
+            this.btnConfig.Location = new System.Drawing.Point(116, 107);
             this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(100, 28);
@@ -62,12 +62,13 @@
             // lblRunning
             // 
             this.lblRunning.AutoSize = true;
-            this.lblRunning.Location = new System.Drawing.Point(117, 50);
+            this.lblRunning.Location = new System.Drawing.Point(113, 41);
             this.lblRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRunning.Name = "lblRunning";
             this.lblRunning.Size = new System.Drawing.Size(111, 16);
             this.lblRunning.TabIndex = 2;
             this.lblRunning.Text = "Currently Running";
+            this.lblRunning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ntfIcon
             // 
@@ -83,7 +84,7 @@
             this.cbPauseSchedule.AutoSize = true;
             this.cbPauseSchedule.Location = new System.Drawing.Point(12, 192);
             this.cbPauseSchedule.Name = "cbPauseSchedule";
-            this.cbPauseSchedule.Size = new System.Drawing.Size(132, 20);
+            this.cbPauseSchedule.Size = new System.Drawing.Size(129, 20);
             this.cbPauseSchedule.TabIndex = 3;
             this.cbPauseSchedule.Text = "Pause Scheduler";
             this.cbPauseSchedule.UseVisualStyleBackColor = true;
