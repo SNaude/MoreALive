@@ -883,4 +883,10 @@
         AwAAwAMAAMADAADAAwAAwAMAAMAHAADADwAA//8AAA==
 </value>
   </data>
+  <metadata name="ttPauseSchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <metadata name="ttStart.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>277, 20</value>
+  </metadata>
 </root>

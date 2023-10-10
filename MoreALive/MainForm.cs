@@ -19,6 +19,10 @@ namespace MoreALive
         public MainForm()
         {
             InitializeComponent();
+
+            ttPauseSchedule.SetToolTip(cbPauseSchedule, "Disables the scheduler to let MoreAlive run freely");
+            ttStart.SetToolTip(btnStart, "Pause MoreAlive preventing it from keeping your pc Alive");
+
             config.Setup();
             cbPauseSchedule.Checked = config.PauseScheduler;
             moreAliveThread = new MoreAliveThread();
@@ -33,6 +37,7 @@ namespace MoreALive
         {
             if (started)
             {
+                ttStart.SetToolTip(btnStart, "Start running MoreAlive keeping your pc Alive");
                 btnStart.Text = "Start";
                 lblRunning.Text = "Currently Paused";
                 moreAliveThread.Stop();
@@ -42,6 +47,7 @@ namespace MoreALive
             }
             else
             {
+                ttStart.SetToolTip(btnStart, "Pause MoreAlive preventing it from keeping your pc Alive");
                 btnStart.Text = "Pause";
                 ChangeText();
                 moreAliveThread.Start();

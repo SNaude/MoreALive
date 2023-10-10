@@ -35,14 +35,15 @@
             this.lblRunning = new System.Windows.Forms.Label();
             this.ntfIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.cbPauseSchedule = new System.Windows.Forms.CheckBox();
+            this.ttPauseSchedule = new System.Windows.Forms.ToolTip(this.components);
+            this.ttStart = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(116, 71);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStart.Location = new System.Drawing.Point(87, 58);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(100, 28);
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Pause";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -50,10 +51,9 @@
             // 
             // btnConfig
             // 
-            this.btnConfig.Location = new System.Drawing.Point(116, 107);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfig.Location = new System.Drawing.Point(87, 87);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(100, 28);
+            this.btnConfig.Size = new System.Drawing.Size(75, 23);
             this.btnConfig.TabIndex = 1;
             this.btnConfig.Text = "Settings";
             this.btnConfig.UseVisualStyleBackColor = true;
@@ -62,10 +62,9 @@
             // lblRunning
             // 
             this.lblRunning.AutoSize = true;
-            this.lblRunning.Location = new System.Drawing.Point(113, 41);
-            this.lblRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRunning.Location = new System.Drawing.Point(85, 33);
             this.lblRunning.Name = "lblRunning";
-            this.lblRunning.Size = new System.Drawing.Size(111, 16);
+            this.lblRunning.Size = new System.Drawing.Size(105, 15);
             this.lblRunning.TabIndex = 2;
             this.lblRunning.Text = "Currently Running";
             this.lblRunning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,24 +81,24 @@
             // cbPauseSchedule
             // 
             this.cbPauseSchedule.AutoSize = true;
-            this.cbPauseSchedule.Location = new System.Drawing.Point(12, 192);
+            this.cbPauseSchedule.Location = new System.Drawing.Point(9, 156);
+            this.cbPauseSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.cbPauseSchedule.Name = "cbPauseSchedule";
-            this.cbPauseSchedule.Size = new System.Drawing.Size(129, 20);
+            this.cbPauseSchedule.Size = new System.Drawing.Size(130, 19);
             this.cbPauseSchedule.TabIndex = 3;
-            this.cbPauseSchedule.Text = "Pause Scheduler";
+            this.cbPauseSchedule.Text = "Disable Scheduler";
             this.cbPauseSchedule.UseVisualStyleBackColor = true;
             this.cbPauseSchedule.CheckedChanged += new System.EventHandler(this.cbPauseSchedule_CheckedChanged);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 224);
+            this.ClientSize = new System.Drawing.Size(257, 182);
             this.Controls.Add(this.cbPauseSchedule);
             this.Controls.Add(this.lblRunning);
             this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.btnStart);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MoreAlive";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -116,6 +115,8 @@
         private System.Windows.Forms.Label lblRunning;
         private System.Windows.Forms.NotifyIcon ntfIcon;
         private System.Windows.Forms.CheckBox cbPauseSchedule;
+        private System.Windows.Forms.ToolTip ttPauseSchedule;
+        private System.Windows.Forms.ToolTip ttStart;
     }
 }
 
